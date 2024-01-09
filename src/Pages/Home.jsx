@@ -2,8 +2,9 @@ import { useContext } from "react";
 import { Global } from "../Context";
 
 import Header from "../Components/Header";
-import About from "../Components/About";
+import Introduction from "../Components/Introduction";
 import Technologies from "../Components/Technologies";
+import About from "../Components/About";
 
 function Home() {
   const { toggle } = useContext(Global);
@@ -11,8 +12,9 @@ function Home() {
   return !toggle ? (
     <>
       <Header />
-      <About />
+      <Introduction />
       <Technologies />
+      <About />
     </>
   ) : (
     <Header />
