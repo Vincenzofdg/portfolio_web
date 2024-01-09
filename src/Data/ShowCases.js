@@ -5,7 +5,7 @@ import GitHuntIcon from "../Assets/Projects/githunt.png"
 export default [
      {
           name: "DrinkUp",
-          about: "💧 Mobile App to help remembering to drink water 💧",
+          about: "Stay hydrated and healthy with DrinkUp, your hydration reminder app. It's your personal H2O companion, dedicated to ensuring you never forget to drink water throughout the day.",
           skill: [
                ["React Native", "Modal", "Life Cycle"],
                [],
@@ -17,7 +17,7 @@ export default [
      },
      {
           name: "VKountDown Timer",
-          about: "On this project I intended to create a simple countdown timer to help on daily tasks by managing time and keeping users aware of time speeding. Since it's a simple application, there was no reason for using any framework.",
+          about: "VKountdown Timer is your essential countdown companion, designed to make time management a breeze. Whether you're tracking important events, staying productive, or adding excitement to your daily routines, VKountdown Timer has you covered.",
           skill: [
                ["React Native", "Life Cycle"],
                ["Native CountDown Component", "React Native Sound", "React Native Restart"],
