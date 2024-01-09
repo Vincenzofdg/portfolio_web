@@ -1,19 +1,19 @@
 import "../Style/Technologies.css";
 
-// import Swift from "../Assets/Technologies/Swift.svg";
-import JavaScript from "../Assets/Technologies/JavaScript.svg";
-import React from "../Assets/Technologies/React.svg";
-import NodeJS from "../Assets/Technologies/NodeJS.svg";
-import Sequelize from "../Assets/Technologies/Sequelize.svg";
-import MySQL from "../Assets/Technologies/MySQL.svg";
-import MongoDB from "../Assets/Technologies/MongoDB.svg";
-import Docker from "../Assets/Technologies/Docker.svg";
-import Git from "../Assets/Technologies/Git.svg";
+import Swift from "../Assets/Technologies/Swift.png";
+import JavaScript from "../Assets/Technologies/JavaScript.png";
+import React from "../Assets/Technologies/React.png";
+import NodeJS from "../Assets/Technologies/NodeJS.png";
+import Sequelize from "../Assets/Technologies/Sequelize.png";
+import MySQL from "../Assets/Technologies/MySQL.png";
+import MongoDB from "../Assets/Technologies/MongoDB.png";
+import Docker from "../Assets/Technologies/Docker.png";
+import Git from "../Assets/Technologies/Git.png";
 
 function Technologies() {
   return (
     <div className="technologies-container">
-      {/* <img id="tec-img" src={Swift} alt="Swift" /> */}
+      <img id="tec-img" src={Swift} alt="Swift" />
       <img id="tec-img" src={JavaScript} alt="JavaScript" />
       <img id="tec-img" src={React} alt="React" />
       <img id="tec-img" src={NodeJS} alt="NodeJS" />
