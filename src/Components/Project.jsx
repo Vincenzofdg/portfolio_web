@@ -1,10 +1,11 @@
 
-import Introduction from "../Components/Introduction";
+function Project({data}) {
+  const { name, description, apple, google, repo } = data;
 
-function Project() {
   return (
-    <>
-    </>
+    <div>
+      <p>{name}</p>
+    </div>
   )
 }
 
