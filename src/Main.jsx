@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Routes from './Routes.jsx';
+import Routes from './Routes';
 
 import Global from "./Context/Global.jsx";
 import './Style/Main.css';
