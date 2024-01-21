@@ -5,6 +5,7 @@ import Header from "../Components/Header";
 import Introduction from "../Components/Introduction";
 import Technologies from "../Components/Technologies";
 import About from "../Components/About";
+import Footer from "../Components/Footer";
 
 import Email from "../Components/Email";
 
@@ -18,6 +19,7 @@ function Home() {
       <Technologies />
       <About />
       <Email />
+      <Footer />
     </>
   ) : (
     <Header />

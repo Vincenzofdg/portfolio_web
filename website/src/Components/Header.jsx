@@ -57,7 +57,15 @@ function Header() {
           { navArray.map((e, i) => renderNavText(e, i)) }
         </div>
 
-        { renderContact() }
+        <button 
+          className="dashboard-btn"
+          type="button"
+          onClick={() => window.open('https://wwww.vkoders.com', '_blank')}
+        >
+          Client Login
+        </button>
+
+        {/* { renderContact() } */}
       </div>
 
       {

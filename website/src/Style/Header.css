@@ -2,6 +2,7 @@
   background-color: rgb(29, 30, 43);
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   /* width: 100vw; */
 }
@@ -36,6 +37,25 @@
   transform: scale(1.01);
 }
 
+/* Client Dashboard */
+.dashboard-btn {
+  cursor: pointer;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 18px 40px 18px 40px;
+  border-radius: 15px;
+  border: 0px;
+}
+
+.dashboard-btn:hover {
+  transform: scale(1.005);
+  background-color: rgb(102, 101, 101);
+  color: rgb(0, 0, 0);
+}
+
+
 /* Contact Icons */
 .contact-container {
   display: flex;
@@ -50,7 +70,6 @@
 
 .contact-icon:hover {
   transform: scale(1.05);
-  /* filter: brightness(0) invert(1) saturate(5) hue-rotate(270deg); */
 }
 
 /* Toggle Menu */
@@ -109,8 +128,6 @@
     top: 3%;
     right: 7%;
   }
-
-
 
   .toggle-grid-center {
     width: 100vw;
