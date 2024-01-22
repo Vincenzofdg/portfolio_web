@@ -1,4 +1,4 @@
-name: Deploy to Hostinger
+name: Deploy Website to Hostinger
 
 on:
   push:
@@ -26,5 +26,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: deploy
+          branch: website
           folder: website/dist/

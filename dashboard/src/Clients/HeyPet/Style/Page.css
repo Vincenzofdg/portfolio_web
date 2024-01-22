@@ -1,0 +1,8 @@
+.heypet-page {
+  background-color: rgb(223, 226, 229);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+}
