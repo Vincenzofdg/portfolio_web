@@ -60,7 +60,7 @@ function Header() {
         <button 
           className="dashboard-btn"
           type="button"
-          onClick={() => window.open('https://wwww.vkoders.com', '_blank')}
+          onClick={() => window.open('https://vkcoders.com', '_blank')}
         >
           Client Login
         </button>
