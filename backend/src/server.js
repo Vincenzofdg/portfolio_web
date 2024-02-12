@@ -1,7 +1,7 @@
 require('dotenv').config();
 const app = require('./api');
 
-const PORT = process.env.DB_PORT;
+const PORT = process.env.PORT;
 
 app.get('/', (_request, response) => response.json("Running " + PORT));
 

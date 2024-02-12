@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "website": "cd website && npm run dev"
+    "website": "cd website && npm run dev",
+    "compose": "docker-compose down && docker-compose up"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vincenzo Fedzuirek Di Giacomo",
   "license": "ISC",
   "description": ""
 }
