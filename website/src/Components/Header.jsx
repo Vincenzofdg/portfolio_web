@@ -60,7 +60,7 @@ function Header() {
         <button 
           className="dashboard-btn"
           type="button"
-          onClick={() => navigate("dashboard")}
+          onClick={() => window.open('https://vkcoders.com', '_blank')}
         >
           Client Login
         </button>
