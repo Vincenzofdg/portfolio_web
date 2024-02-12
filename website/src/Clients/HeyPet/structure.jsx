@@ -1,5 +1,5 @@
 import LogoImg from "./Assets/logo.png";
-import InfoImg from "../../Assets/information.png";
+import InfoImg from "./Assets/information.png";
 import HomeImg from "./Assets/home.png";
 import AdoptionImg from "./Assets/adoption.png";
 import LostImg from "./Assets/lost.png";
