@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { Global } from "../../../../../Context";
+import { Global } from "../../../../Context";
 
 import { server } from "../../Services/api";
-import Loader from "../../../../../Components/Loader";
+import Loader from "../../../../Components/Loader";
 import { list } from "../../Services/Adoption";
 import "../../Style/Adoption.css";
 

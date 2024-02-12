@@ -17,8 +17,6 @@ function ShowCases() {
       <MobileTitle text={"Show Cases"}/>
       {
         Data.map((p, i) => {
-          console.log(Data.length)
-          console.log(i)
           if (Data.length !== i + 1 ) return (
             <>
               <Project key={`project-${i}`} data={p} />

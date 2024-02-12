@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { Global } from "../../../../Context";
+import { Global } from "../../../Context";
+
 
 import "../Style/Menu.css";
 import structure from "../structure";

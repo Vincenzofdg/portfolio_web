@@ -16,8 +16,6 @@ function Projects() {
       <MobileTitle text={"Projects"}/>
       {
         Data.map((p, i) => {
-          console.log(Data.length)
-          console.log(i)
           if (Data.length !== i + 1 ) return (
             <>
               <Project key={`project-${i}`} data={p} />

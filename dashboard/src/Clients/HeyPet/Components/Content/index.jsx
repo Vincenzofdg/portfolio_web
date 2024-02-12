@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Global } from "../../../../../Context";
+import { Global } from "../../../../Context";
 
 import Information from "./Information";
 import Adoption from "./Adoption";

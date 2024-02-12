@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { Global } from "../../../Context";
+import { Global } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
 import Menu from "./Components/Menu";

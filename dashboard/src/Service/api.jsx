@@ -1,5 +1,5 @@
-const BASE_URL = "http://localhost:";
-const PORT = 3001
+const BASE_URL = "http://193.203.183.47:";
+const PORT = 3000
 
 const URL = BASE_URL + PORT;
 
