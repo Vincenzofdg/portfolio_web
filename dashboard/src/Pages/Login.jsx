@@ -6,28 +6,24 @@ import "../Styles/Login.css";
 import Cover from "../Assets/cover.png";
 import Logo from "../Assets/logo.jpg";
 
-// import { requestLogin } from "../Service/Login";
-import { teste } from "../Service/test";
+import { requestLogin } from "../Service/Login";
 
 function LoginPage() {
   const { setClient, setToken, credentials, setCredentials } = useContext(Global);
   const navigate = useNavigate();
 
   const handleClick = async () => {
-    // const response = await requestLogin(credentials);
+    const response = await requestLogin(credentials);
     
-    // if (!response.token) {
-    //   window.alert(response);
-    //   setCredentials(prev => ({...prev, password: ""}));
-    //   return;
-    // }
+    if (!response.token) {
+      window.alert(response);
+      setCredentials(prev => ({...prev, password: ""}));
+      return;
+    }
 
-    // setToken(response.token);
-    // setClient(response.data);
-    // navigate(`/${response.endpoint}`)
-
-    const response = await teste();
-    console.log(response)
+    setToken(response.token);
+    setClient(response.data);
+    navigate(`/${response.endpoint}`)
   }
 
   const textInput = (name) => {
