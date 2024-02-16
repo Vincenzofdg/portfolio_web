@@ -9,9 +9,6 @@ import Footer from "../Components/Footer";
 
 import Email from "../Components/Email";
 
-
-import { logIn } from "../Service/test";
-
 function Home() {
   const { toggle } = useContext(Global);
   
