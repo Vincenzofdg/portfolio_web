@@ -12,9 +12,9 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Login />} />
       {/* <Route path="/overview" element={<Overview />} /> */}
-      <Route path="/hey-pet" element={<HeyPet />} />
       <Route path="*" element={<NotFound />} />
       {/* Clients */}
+      <Route path="/app-hey-pet" element={<HeyPet />} />
       {/* <Route path="/aumigo" element={<AuMigo />} /> */}
     </Routes>
   )
