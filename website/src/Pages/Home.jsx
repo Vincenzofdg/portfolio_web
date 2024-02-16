@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Global } from "../Context";
 
 import Header from "../Components/Header";
@@ -14,16 +14,6 @@ import { logIn } from "../Service/test";
 
 function Home() {
   const { toggle } = useContext(Global);
-
-  useEffect(() => {
-    async function Jobs() {
-      const test = await logIn()
-      console.log("teste")
-      console.log(test)
-    }
-
-    Jobs()
-  }, [])
   
   return !toggle ? (
     <>
