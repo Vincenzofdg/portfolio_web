@@ -1,9 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { Global } from "../../../../Context";
 
-import { server } from "../../Services/api";
-import Loader from "../../../../Components/Loader";
 import { list } from "../../Services/Adoption";
+
+import Loader from "../../../../Components/Loader";
+import Status from "../Status";
+import AnimalCard from "../AnimalCard";
+
 import "../../Style/Adoption.css";
 
 function Adoption() {
@@ -27,50 +30,19 @@ function Adoption() {
     Request()
   }, [])
 
-  const menuIndex = (value, text) => {
-    return (
-      <div 
-        style={{backgroundColor: type === value && "rgb(179, 194, 208)"}}
-        className="c-adoption-text"
-        onClick={() => setType(value)}
-      >
-        <p id="c-adoption-text">{text}</p>
-        {
-          (value === "pending" && pendingAnimal.length > 0) && (
-            <div style={{backgroundColor: "red", width: "8px", height: "8px", borderRadius: "50px", marginLeft: "5px"}}/>
-          )
-        }
-      </div>
-    )
-  }
-
-  const card = (data, index) => {
-    const { animal, picture, name, region, user, description } = data;
-    return (
-      <div key={`${animal}-${index}`} className="c-adoption-card">
-        <img id="c-adoption-img" src={server + "/" + picture} alt="" srcset="" />
-        <div className="c-adoption-card-content">
-          <p id="c-adoption-card-text">Nome: {name}</p>
-          <p id="c-adoption-card-text">Postado por <i>{user}</i> em <i>{region}</i></p>
-          <p id="c-adoption-card-description">{description}</p>
-        </div>
-      </div>
-    )
-  }
-
   return !!load ? (
     <Loader />
   ) : (
     <div className="c-adoption-page">
       <div className="c-adoption-menu">
-        { menuIndex("accepted", "Aceitos") }
-        { menuIndex("pending", "Pendentes") }
+        <Status text={"Aceitos"} value={"accepted"} list={pendingAnimal} state={{cur: type, action: setType}} />
+        <Status text={"Pendentes"} value={"pending"} list={pendingAnimal} state={{cur: type, action: setType}} />
       </div>
 
       {
         type === "accepted" ? (
           <div className="c-adoption-list">
-            { acceptedAnimal.map((animal, i) => card(animal, i)) }
+            { acceptedAnimal.map((animal, i) => <AnimalCard key={`accepted-adoption-${i}`} data={animal} i={i}/>) }
           </div>
         ) : (
           <div className="c-adoption-list">
@@ -78,13 +50,12 @@ function Adoption() {
               pendingAnimal.length === 0 ? (
                 <p style={{color: "black"}}>Sem Solicitações</p>
               ) : (
-                pendingAnimal.map((animal, i) => card(animal, i))
+                pendingAnimal.map((animal, i) => <AnimalCard key={`pending-adoption-${i}`} data={animal} i={i}/>)
               )
             }
           </div>
         )
       }
-
     </div>
   )
 }

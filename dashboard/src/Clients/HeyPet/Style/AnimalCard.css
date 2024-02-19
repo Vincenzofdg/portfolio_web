@@ -1,0 +1,39 @@
+.c-animal-card {
+  background-color: rgb(233, 229, 229);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.c-animal-card:hover {
+  transform: scale(1.002);
+  background-color: rgb(179, 194, 208);
+}
+
+#c-animal-img {
+  height: 200px;
+  width: 25%;
+  object-fit: cover;
+}
+
+.c-animal-card-content {
+  width: 70%;
+  padding-left: 30px;
+}
+
+#c-animal-card-text {
+  text-align: left;
+  color: black;
+  font-size: 13px;
+}
+
+#c-animal-card-description {
+  text-align: left;
+  color: black;
+  font-size: 14px;
+}

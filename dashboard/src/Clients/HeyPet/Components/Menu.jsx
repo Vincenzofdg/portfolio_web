@@ -25,6 +25,7 @@ function Menu() {
   return (
     <div className="hey-pet-menu">
       <img id="hey-pet-logo" src={structure["logo"]} alt="Hey Pet Logo" />
+      <p id="hey-pet-menu-website" onClick={() => window.open(client.site_url, '_blank')}>website</p>
       <div className="hey-pet-menu-container">
         { menuElement('info') }
         { menuElement('adoption') }
@@ -36,7 +37,6 @@ function Menu() {
         { menuElement('news') }
         { menuElement('sponsors') }
       </div>
-      <p id="hey-pet-menu-website" onClick={() => window.open(client.site_url, '_blank')}>website</p>
     </div>
   )
 }

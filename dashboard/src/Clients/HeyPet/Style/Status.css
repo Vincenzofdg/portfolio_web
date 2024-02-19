@@ -1,0 +1,19 @@
+.c-status-text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#c-status-text {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+}
+
+.c-status-text:hover {
+  cursor: pointer;
+  background-color: rgb(179, 194, 208);
+}

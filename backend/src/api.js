@@ -10,8 +10,10 @@ const api = express();
 api.use(express.json());
 api.use(cors);
 
+const SERVER_INDEX = "main";
+
 // Requests
-api.use("/login", routes.login);
+api.use(`/${SERVER_INDEX}/login`, routes.login);
 
 api.use(errorHandler);
 
