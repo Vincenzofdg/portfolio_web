@@ -7,6 +7,5 @@ export default async (obj) => {
     email: obj.username,
     password: obj.password
   });
-
   return data.token
 };

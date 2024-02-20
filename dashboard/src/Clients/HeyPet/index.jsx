@@ -6,7 +6,7 @@ import Menu from "./Components/Menu";
 import Content from "./Components/Content";
 import "./Style/Page.css";
 
-import getAcessToken from "./Services/getAcessToken";
+import getAcessToken from "../../Service/HeyPet/getAcessToken";
 
 function HeyPet() {
   const { token, setMenuIndex, credentials, setRequestToken } = useContext(Global);

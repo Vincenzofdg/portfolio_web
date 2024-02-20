@@ -1,0 +1,10 @@
+.c-apps-list {
+  align-self: center;
+  background-color: rgb(245, 245, 245);
+  padding: 25px;
+  margin-right: 50px;
+  width: 70%;
+  border-radius: 20px;
+  height: 82%;
+  overflow-y: auto;
+}

@@ -1,11 +1,11 @@
 import api from "./api";
 
-const URL = '/missing-animals'
+const ENDPOINT = '/adoptions'
 
 export const list = async (token) => {  
   try {
     const { data } = await api.get(
-      URL,
+      ENDPOINT,
       {
         headers: { 'Authorization': token }
       }

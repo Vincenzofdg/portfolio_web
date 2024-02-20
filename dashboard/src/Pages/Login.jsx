@@ -4,9 +4,9 @@ import { Global } from "../Context";
 
 import "../Styles/Login.css";
 import Cover from "../Assets/cover.png";
-import Logo from "../Assets/logo.jpg";
+// import Logo from "../Assets/logo.jpg";
 
-import { requestLogin } from "../Service/Login";
+import { requestLogin } from "../Service/Main/Login";
 
 function LoginPage() {
   const { setClient, setToken, credentials, setCredentials } = useContext(Global);
@@ -52,7 +52,7 @@ function LoginPage() {
   return (
     <>
       <img className="cover" src={Cover} alt="VKoders Cover" />
-      <img className="logo" src={Logo} alt="VKoders Logo" />
+      {/* <img className="logo" src={Logo} alt="VKoders Logo" /> */}
       <div className="container">
         {textInput('username')}
         {textInput('password')}

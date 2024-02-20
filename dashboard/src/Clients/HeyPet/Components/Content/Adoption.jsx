@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Global } from "../../../../Context";
 
-import { list } from "../../Services/Adoption";
+import { list } from "../../../../Service/HeyPet/Adoption";
 
 import Loader from "../../../../Components/Loader";
 import Status from "../Status";
@@ -12,9 +12,9 @@ import "../../Style/Adoption.css";
 function Adoption() {
   const [type, setType] = useState("accepted");
   const [load, setLoad] = useState(true);
-
   const [acceptedAnimal, setAcceptedAnimal] = useState([]);
   const [pendingAnimal, setPendingAnimal] = useState([]);
+  
   const { requestToken } = useContext(Global);
 
   useEffect(() => {
@@ -38,7 +38,6 @@ function Adoption() {
         <Status text={"Aceitos"} value={"accepted"} list={pendingAnimal} state={{cur: type, action: setType}} />
         <Status text={"Pendentes"} value={"pending"} list={pendingAnimal} state={{cur: type, action: setType}} />
       </div>
-
       {
         type === "accepted" ? (
           <div className="c-adoption-list">

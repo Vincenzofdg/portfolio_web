@@ -14,6 +14,7 @@ const SERVER_INDEX = "main";
 
 // Requests
 api.use(`/${SERVER_INDEX}/login`, routes.login);
+api.use(`/${SERVER_INDEX}/products`, routes.products);
 
 api.use(errorHandler);
 
