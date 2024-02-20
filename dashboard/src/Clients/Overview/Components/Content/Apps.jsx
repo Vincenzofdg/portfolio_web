@@ -12,20 +12,11 @@ function Apps() {
   const [list, setList] = useState([]);
   const [load, setLoad] = useState(true);
 
-  const mocked = [{
-    id: 1,
-    name: "Hey Pet",
-    online: true,
-    type: "app",
-    image: "https://play-lh.googleusercontent.com/4y_rLtJea8puDsXPXJbOoQFKIqfsv471teCk9lyYLrA7IkvyKagdqJICYmqaJMrcw6c=w240-h480"
-  }]
-
   useEffect(() => {
     async function Jobs() {
-      const test = await getAll(token);
-      console.log(test)
-      
-      setList(mocked);
+      const fullList = await getAll(token);
+      const appList = fullList.filter(product => product.type === "app")
+      setList(appList);
       setLoad(false);
     }
     Jobs()
@@ -36,7 +27,7 @@ function Apps() {
   ) : (
     <div className="c-apps-list">
       {
-        list.map((data, i) => <Card data={data} key={"app-" + i} />)
+        list.map((data, i) => <Card data={data} token={token} key={"app-" + i} />)
       }
     </div>
   )

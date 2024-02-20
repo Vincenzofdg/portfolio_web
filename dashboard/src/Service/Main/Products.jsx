@@ -15,3 +15,15 @@ export const getAll = async (token) => {
     return errorResponse;
   }
 };
+
+export const publish = async (value, id, token) => {
+  console.log(value, id)
+  try {
+    await api.put(`${ENDPOINT}/${id}`, { value: !value ? '0' : '1' }, {
+      headers: { 'Authorization': token }
+    });
+  } catch (error) {
+    const errorResponse = RequestError(error);
+    return errorResponse;
+  }
+};
