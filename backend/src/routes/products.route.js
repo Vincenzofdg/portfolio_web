@@ -8,7 +8,7 @@ const { token } = require('../middlewares');
 const login = Router();
 
 login
-     .get("/", [token, getAll])
+     .get("/", getAll)
      .put("/:id", [token, updatePublish])
 
 module.exports = login;
