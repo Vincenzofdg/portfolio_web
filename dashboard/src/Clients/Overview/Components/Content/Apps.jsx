@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useContext } from "react";
+import { Global } from "../../../../Context";
 import Loader from "../../../../Components/Loader";
 import Card from "../AppCard";
+
+import { getAll } from "../../../../Service/Main/Products";
 
 import "../../Style/Apps.css";
 
 function Apps() {
+  const { token } = useContext(Global);
   const [list, setList] = useState([]);
   const [load, setLoad] = useState(true);
 
@@ -19,7 +22,9 @@ function Apps() {
 
   useEffect(() => {
     async function Jobs() {
-
+      const test = await getAll(token);
+      console.log(test)
+      
       setList(mocked);
       setLoad(false);
     }

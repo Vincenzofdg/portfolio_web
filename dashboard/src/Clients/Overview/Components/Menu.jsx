@@ -7,8 +7,6 @@ import structure from "../structure";
 function Menu() {
   const { menuIndex, setMenuIndex } = useContext(Global);
 
-  console.log(Object.keys(structure))
-
   const menuElement = (name, i) => {
     if (name === "logo") return;
     
