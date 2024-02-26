@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { Global } from "../../../../Context";
 
-import Clients from "./Clients";
+import Search from "./Search";
 import Apps from "./Apps";
 
 const ContentSwitch = () => {
   const { menuIndex } = useContext(Global);
   const obj = {
-    clients: <Clients />,
+    Search: <Search />,
     apps: <Apps />,
   };
   

@@ -8,7 +8,7 @@ import structure from "./structure";
 
 import "./Style/Page.css";
 
-function Overview() {
+function Pesquisa() {
   const { token, setMenuIndex } = useContext(Global);
   const navigate = useNavigate();
 
@@ -28,4 +28,4 @@ function Overview() {
   )
 }
 
-export default Overview;
+export default Pesquisa;
