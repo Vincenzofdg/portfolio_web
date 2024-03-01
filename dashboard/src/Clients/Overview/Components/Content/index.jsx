@@ -6,9 +6,10 @@ import Apps from "./Apps";
 
 const ContentSwitch = () => {
   const { menuIndex } = useContext(Global);
+
   const obj = {
     Search: <Search />,
-    apps: <Apps />,
+    Apps: <Apps />,
   };
   
   return obj[menuIndex]

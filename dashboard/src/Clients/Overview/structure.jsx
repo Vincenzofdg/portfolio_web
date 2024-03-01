@@ -6,7 +6,7 @@ export default {
     img: ClientImg,
     title: 'Pesquisa'
   },
-  apps: {
+  Apps: {
     img: AppsImg,
     title: 'Published Apps'
   }
