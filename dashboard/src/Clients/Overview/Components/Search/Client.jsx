@@ -8,7 +8,7 @@ import { getAllClients, createClient } from "../../../../Service/Pesquisa/Client
 function Client({current}) {
     const { requestToken } = useContext(Global);
     const { setNewSearch } = useContext(Pesquisa);
-    const [ newClient, setNewClient ] = useState({user: '', name: '', password: ''});
+    const [ newClient, setNewClient ] = useState({user: '', name: '', password: '', total: 0});
     const [list, setList] = useState([]);
     const [forceUpdate, setForceUpdate] = useState(false);
     const [selected, setSelected] = useState(null);
@@ -34,10 +34,10 @@ function Client({current}) {
     const handleInput = ({target: {name, value}}) => setDataCollected(p => ({...p, [name]: value}));
     const handleNewClient = ({target: {name, value}}) => setNewClient(p => ({...p, [name]: value}));
     const handleSubmitBlock = () => {
-        const { clientId, qtdUsers } = dataCollected;
+        const { clientId, qtdUsers, total } = dataCollected;
         const newObj = {
             status: true,
-            value: { clientId, qtdUsers, meta }
+            value: { clientId, qtdUsers, meta, total }
         };
         setNewSearch(p => ({
             ...p,
@@ -57,7 +57,6 @@ function Client({current}) {
             setSelected(id);
         }
 
-        
         return (
             <div 
                 key={"client-" + index}
@@ -111,8 +110,8 @@ function Client({current}) {
             </div>
             <div className="c-client-block-new">
                 <div className="c-client-block-row">
-                    <input name="total" onChange={handleInput} value={dataCollected.total} className="c-client-block-input" type="number" />
-                    <input name="qtdUsers" onChange={handleInput} value={dataCollected.qtdUsers} className="c-client-block-input" type="number" />
+                    <input name="total" onChange={handleInput} className="c-client-block-input" type="number" />
+                    <input name="qtdUsers" onChange={handleInput} className="c-client-block-input" type="number" />
                     <p className="c-client-block-input" style={{color: "black", cursor: "default"}}>{meta}</p>
                 </div>
             </div>
