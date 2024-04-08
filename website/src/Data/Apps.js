@@ -1,5 +1,3 @@
-import DrinkUpIcon from "../Assets/Projects/drinkup.png"
-import VKountDownIcon from "../Assets/Projects/vkountdown.png"
 import GitHuntIcon from "../Assets/Projects/githunt.png"
 
 export default [
@@ -13,7 +11,7 @@ export default [
           apple: "https://www.apple.com",
           google: "https://play.google.com/store/apps/details?id=com.drinkupwater",
           repo: "https://github.com/Vincenzofdg/DrinkUP",
-          icon: DrinkUpIcon,
+          icon: "https://play-lh.googleusercontent.com/m5S2KxJMq9qwL7s7maQaTQDjsA_s6WZrzSalw17zjrAzjbUvVkhBuo7Za84dtT01LQ=w240-h480",
      },
      {
           name: "VKountDown Timer",
@@ -25,7 +23,7 @@ export default [
           apple: "https://www.apple.com",
           google: "https://play.google.com/store/apps/details?id=com.vkountdown_timer",
           repo: "https://github.com/Vincenzofdg/VKountdown_Timer",
-          icon: VKountDownIcon,
+          icon: "https://play-lh.googleusercontent.com/lcEOdDunBlrDAiLtDg3nbliLiHBLMkPZzcmc6CMIds6MKlYRvV8WvBZvb8Ih1o8MxYq0=w240-h480",
      },
      {
           name: "GitHunt",

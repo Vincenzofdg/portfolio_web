@@ -14,7 +14,6 @@ services:
     volumes:
       - ./data:/docker-entrypoint-initdb.d
 
-
   adminer:
     image: adminer
     container_name: db_admin

@@ -13,7 +13,7 @@ function Header() {
   const { menu, SetMenu, toggle, SetToggle } = useContext(Global);
   const navigate = useNavigate();
 
-  const navArray = ["Home", "Show Cases", "Projects"];
+  const navArray = ["Home", "Websites", "Apps", "Products"];
 
   const renderNavText = (e, i) => {
     const keyValue = `nav-${i + 1}`;
@@ -56,16 +56,6 @@ function Header() {
         <div className="nav-container">
           { navArray.map((e, i) => renderNavText(e, i)) }
         </div>
-
-        <button 
-          className="dashboard-btn"
-          type="button"
-          onClick={() => window.open('https://vkcoders.com', '_blank')}
-        >
-          Client Login
-        </button>
-
-        {/* { renderContact() } */}
       </div>
 
       {
@@ -93,9 +83,7 @@ function Header() {
           </>
         )
       }
-
     </>
-
   )
 }
 

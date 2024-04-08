@@ -1,26 +1,25 @@
+import React, { useContext } from "react";
 import Header from "../Components/Header";
-import { useContext } from "react";
 import { Global } from "../Context";
 
 import Project from "../Components/Project";
-import MobileTitle from "../Components/MobileTitle";
+import Divider from "../Components/Divider";
 
-import Data from "../Data/Projects";
+import Data from "../Data/WebSites";
 
-function Projects() {
+function WebSites() {
   const { toggle } = useContext(Global);
 
   return !toggle ? (
     <>
       <Header />
-      <MobileTitle text={"Projects"}/>
       {
         Data.map((p, i) => {
           if (Data.length !== i + 1 ) return (
-            <>
-              <Project key={`project-${i}`} data={p} />
+            <React.Fragment key={`project-${i}`}>
+              <Project data={p} />
               <Divider />
-            </>
+            </React.Fragment>
           )
           return <Project key={`project-${i}`} data={p} />
         })
@@ -31,4 +30,4 @@ function Projects() {
   )
 }
 
-export default Projects;
+export default WebSites;

@@ -11,34 +11,32 @@ function Project({data}) {
     <div className="project-card">
       <div className="project-container">
         <div className="project-presentation">
-          <img id="project-icon" src={icon} alt="" />
+          <img id="project-icon" src={icon} alt="Project Icon" />
           <p id="project-name">{name}</p>
         </div>
         <div className="project-info">
           <p id="project-about">{about}</p>
           <div className="project-stats">
-          
-          {skill[0].length > 0 && (
-            <div className="project-stat">
-              <h3 id="project-topic">Knowledge</h3>
-              <div>
-                {
-                  skill[0].map((e, i) => <p key={`sk-1-${i}`}>• {e}</p>)
-                }
-              </div>
-            </div>
-          )}
-
-          {skill[1].length > 0 && (
-            <div className="project-stat">
-              <h3 id="project-topic">Dependencies</h3>
+            {skill[0].length > 0 && (
+              <div className="project-stat">
+                <h3 id="project-topic">Knowledge</h3>
                 <div>
                   {
-                    skill[1].map((e, i) => <p key={`sk-2-${i}`}>• {e}</p>)
+                    skill[0].map((e, i) => <p id="project-about" key={`sk-1-${i}`}>• {e}</p>)
                   }
                 </div>
-            </div>
-          )}
+              </div>
+            )}
+            {skill[1].length > 0 && (
+              <div className="project-stat">
+                <h3 id="project-topic">Dependencies</h3>
+                  <div>
+                    {
+                      skill[1].map((e, i) => <p id="project-about" key={`sk-2-${i}`}>• {e}</p>)
+                    }
+                  </div>
+              </div>
+            )}
           </div>
 
           <div className="project-stores">

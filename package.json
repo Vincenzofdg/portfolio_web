@@ -6,8 +6,6 @@
     "website": "cd website && npm run dev",
     "compose": "docker-compose down && docker-compose up"
   },
-  "keywords": [],
   "author": "Vincenzo Fedzuirek Di Giacomo",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
