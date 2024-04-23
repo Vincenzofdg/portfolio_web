@@ -33,6 +33,4 @@ Start the server
 ## Dependencies
 
  - [Axios](https://www.npmjs.com/package/axios)
- - [Lottie React Native](https://www.npmjs.com/package/lottie-react-native)
- - [React Native Animated Loader](https://www.npmjs.com/package/react-native-animated-loader)
- - [React Native Version](https://www.npmjs.com/package/react-native-version)
+ - [React Router Dom](https://www.npmjs.com/package/react-router-dom)
