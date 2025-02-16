@@ -10,20 +10,20 @@ import Footer from "../Components/Footer";
 import Email from "../Components/Email";
 
 function Home() {
-  const { toggle } = useContext(Global);
-  
-  return !toggle ? (
-    <>
-      <Header />
-      <Introduction />
-      <Technologies />
-      <About />
-      <Email />
-      <Footer />
-    </>
-  ) : (
-    <Header />
-  )
+    const { toggle } = useContext(Global);
+
+    return !toggle ? (
+        <>
+            <Header />
+            <Introduction />
+            <Technologies />
+            <About />
+            <Email />
+            <Footer />
+        </>
+    ) : (
+        <Header />
+    );
 }
 
 export default Home;

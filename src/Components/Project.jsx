@@ -1,59 +1,80 @@
-import "../Style/Project.css"
+import "../Style/Project.css";
 
 import Apple from "../Assets/Apple.png";
 import Google from "../Assets/Google.png";
-import GitHub from "../Assets/GitHub.png";
+import Web from "../Assets/Web.png";
+import Github from "../Assets/Technologies/Git.svg";
 
-function Project({data}) {
-  const { name, about, skill, apple, google, repo, icon } = data;
+function Project({ data }) {
+    // const { name, about, skill, apple, google, repo, icon } = data;
 
-  return (
-    <div className="project-card">
-      <div className="project-container">
-        <div className="project-presentation">
-          <img id="project-icon" src={icon} alt="Project Icon" />
-          <p id="project-name">{name}</p>
-        </div>
-        <div className="project-info">
-          <p id="project-about">{about}</p>
-          <div className="project-stats">
-            {skill[0].length > 0 && (
-              <div className="project-stat">
-                <h3 id="project-topic">Knowledge</h3>
-                <div>
-                  {
-                    skill[0].map((e, i) => <p id="project-about" key={`sk-1-${i}`}>• {e}</p>)
-                  }
+    return (
+        <div className="project-card">
+            <div className="project-container">
+                <div className="project-presentation">
+                    <img id="project-icon" src={data.icon} alt="Project Icon" />
                 </div>
-              </div>
-            )}
-            {skill[1].length > 0 && (
-              <div className="project-stat">
-                <h3 id="project-topic">Dependencies</h3>
-                  <div>
-                    {
-                      skill[1].map((e, i) => <p id="project-about" key={`sk-2-${i}`}>• {e}</p>)
-                    }
-                  </div>
-              </div>
-            )}
-          </div>
+                <div className="project-info">
+                    <p id="project-name">{data.name}</p>
+                    <p id="project-about">{data.about}</p>
+                    <div className="project-stats">
+                        <div className="project-stat">
+                            {data.skill?.map((e, i) => (
+                                <p id="project-topics" key={`sk-1-${i}`}>
+                                    {e}
+                                </p>
+                            ))}
+                        </div>
+                        <div className="project-stores">
+                            {data?.google && (
+                                <img
+                                    id="project-store"
+                                    src={Google}
+                                    alt="Google Play Store Store"
+                                    onClick={() =>
+                                        window.open(data.google, "_blank")
+                                    }
+                                />
+                            )}
+                            {data?.apple && (
+                                <img
+                                    id="project-store"
+                                    src={Apple}
+                                    alt="Apple Store"
+                                    onClick={() =>
+                                        window.open(data.apple, "_blank")
+                                    }
+                                />
+                            )}
+                            {data?.webLink && (
+                                <img
+                                    id="project-store"
+                                    src={Web}
+                                    alt="Apple Store"
+                                    onClick={() =>
+                                        window.open(data.webLink, "_blank")
+                                    }
+                                />
+                            )}
 
-          <div className="project-stores">
-            <img id="project-store" src={Apple} alt="Apple Store" onClick={() => window.open(apple, '_blank')} />
-            <img id="project-store" src={Google} alt="Google Play Store Store" onClick={() => window.open(google, '_blank')} />
-            <img id="project-store" src={GitHub} alt="Source Code" onClick={() => {
-              if (!repo || repo.length <= 0) {
-                window.alert('Private Repository')
-                return
-              }
-              window.open(repo, '_blank')
-            }}/>
-          </div>
+                            <img
+                                id="project-store"
+                                src={Github}
+                                alt="Source Code"
+                                onClick={() => {
+                                    if (!data.repo || data.repo.length <= 0) {
+                                        window.alert("Private Repository");
+                                        return;
+                                    }
+                                    window.open(data.repo, "_blank");
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    );
 }
 
 export default Project;

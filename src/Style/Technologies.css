@@ -1,13 +1,13 @@
 .technologies-container {
-  margin-top: 65px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    margin-top: 65px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #tec-img {
-  height: 70px;
-  margin: 0px 25px 20px 25px;
+    height: 70px;
+    margin: 0px 25px 20px 25px;
 }

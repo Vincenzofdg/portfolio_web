@@ -1,85 +1,88 @@
 .project-card {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  margin: 30px 0px 10px 0px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 10px 0px;
 }
 
 .project-container {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .project-presentation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
+    background-color: rgb(29, 30, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 #project-icon {
-  background-color: rgb(222, 222, 222);
-  height: 110px;
-  width: 110px;
-  border-radius: 40px;
-  object-fit: fill;
+    width: 150px;
+    object-fit: cover;
 }
 
 #project-name {
-  padding: 10px;
-  font-size: 14px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .project-info {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 #project-about {
-  text-align: justify;
-  line-height: 1.6;
-  font-size: 14px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+#project-topics {
+    background-color: rgb(29, 30, 43);
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 8px;
+    margin-right: 10px;
 }
 
 .project-stats {
-  padding: 10px;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .project-stat {
-  width: 49%;
-  width: 35%;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: row;
 }
 
 #project-topic {
-  padding-top: 10px;
-  padding-bottom: 15px;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
 }
 
 .project-stores {
-  display: flex;
-  justify-content: end;
-  align-items: center;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 #project-store {
-  cursor: pointer;
-  /* padding: 30px; */
-  margin-left: 20px;
-  height: 40px;
+    cursor: pointer;
+    margin-left: 15px;
+    height: 35px;
 }
 
 #project-store:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
