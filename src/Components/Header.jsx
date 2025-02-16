@@ -12,7 +12,7 @@ function Header() {
     const { menu, SetMenu, toggle, SetToggle } = useContext(Global);
     const navigate = useNavigate();
 
-    const navArray = ["Home", "Projects", "Contact"];
+    const navArray = ["Home", "Projects"];
 
     const renderNavText = (e, i) => {
         const keyValue = `nav-${i + 1}`;
