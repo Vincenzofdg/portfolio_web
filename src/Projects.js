@@ -11,7 +11,7 @@ export default [
     {
         name: "Olha Aqui Condominio Backend",
         about: "An intuitive research app streamlining data collection and analysis effectively. It offers a variety of tools for survey creation and implementation, enabling in-depth analysis of results.",
-        skill: ["java", "spring boot"],
+        skill: ["java", "spring boot", "jpa"],
         repo: "https://github.com/Vincenzofdg/olha_aqui_condominio_backend",
         icon: Spring,
     },
