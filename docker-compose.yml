@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  portfolio:
+    container_name: portfolio_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/usr/app/src
+      - /usr/app/node_modules
+    command: "npm run dev"
+    restart: on-failure
+    healthcheck:
+      test: [ "CMD", "curl", "http://localhost:3000" ]
+      timeout: 10s
+      retries: 10
+    networks:
+      - portfolio_network
+
+networks:
+  portfolio_network:
+    driver: bridge

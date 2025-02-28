@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
+        "compose": "docker-compose down --volumes && docker-compose up --build",
         "format": "npx prettier --write ."
     },
     "dependencies": {
