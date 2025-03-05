@@ -6,7 +6,7 @@ function Introduction() {
         <div className="introduction-section">
             <div className="introduction-container">
                 <div className="introduction-text">
-                    <h1 id="introduction-title">Vincenzo F. Di Giacomo</h1>
+                    <h1 id="introduction-title">Vincenzo F. Di Giacomo teste</h1>
                     <p id="introduction-subtitle">
                         Android and Backend Developer
                     </p>
