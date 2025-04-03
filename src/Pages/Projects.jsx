@@ -5,14 +5,15 @@ import { Global } from "../Context";
 import Project from "../Components/Project";
 import Divider from "../Components/Divider";
 
-import StaticData from "../Projects.js";
+// import StaticData from "../Projects.js";
 
 function Projects() {
+    const { toggle, user } = useContext(Global);
     const [data, setData] = useState([]);
-    const { toggle } = useContext(Global);
 
     useEffect(() => {
-        setData(StaticData);
+        // setData(StaticData);
+        setData(user.repositories);
     }, []);
 
     return !toggle ? (
