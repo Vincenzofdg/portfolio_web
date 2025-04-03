@@ -2,6 +2,8 @@ const URL = "https://api.github.com/graphql"
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
 const getPreviewImage = async (repo) => {
+    console.log("Token:", import.meta.env.VITE_GITHUB_TOKEN);
+
     const query = `
         {
             repository(owner: "Vincenzofdg", name: "${repo}") {
