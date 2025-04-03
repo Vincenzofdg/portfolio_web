@@ -19,11 +19,16 @@
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+
 }
 
 #project-icon {
-    width: 150px;
+    width: 280px;
     object-fit: cover;
+    opacity: 0.5;
+
 }
 
 #project-name {
@@ -85,4 +90,75 @@
 
 #project-store:hover {
     transform: scale(1.05);
+}
+
+.filter-project-container {
+    appearance: none;
+    margin-top: 25px;
+    width: 150px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid rgb(29, 30, 43);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='%23007bff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 35px;
+}
+
+.filter-project-container:focus {
+    background-color: rgb(29, 30, 43);
+}
+
+.filter-project-opt {
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgb(29, 30, 43);;
+    color: white;
+}
+
+
+@media (max-width: 1300px) {
+    .project-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .project-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 880px) {
+    .project-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .project-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-info {
+        margin-top: 10px;
+        width: 95%;
+    }
+    .project-stats {
+        flex-direction: column;
+    }
+    .project-stat {
+        flex-wrap: wrap;
+    }
+    .project-stores {
+        align-self: flex-end;
+    }
+    #project-topics {
+        margin-bottom: 5px;
+    }
 }

@@ -1,72 +1,69 @@
+import {useEffect, useState} from "react";
 import "../Style/Project.css";
-
-import Apple from "../Assets/Apple.png";
-import Google from "../Assets/Google.png";
+import Download from "../Assets/Download.png";
 import Web from "../Assets/Web.png";
 import Github from "../Assets/Technologies/Git.svg";
+import getPreviewImage from "../Hooks/getPreviewImage.js";
 
 function Project({ data }) {
-    // const { name, about, skill, apple, google, repo, icon } = data;
+    const [imageUrl, setImageUrl] = useState(undefined);
+    const { name, description, topics, homepage, html_url, default_branch } = data;
+
+    useEffect(() => {
+        async function loadImage() {
+            const previewImgRequest = await getPreviewImage(name)
+            setImageUrl(previewImgRequest)
+        }
+
+        loadImage();
+    }, []);
 
     return (
         <div className="project-card">
             <div className="project-container">
                 <div className="project-presentation">
-                    <img id="project-icon" src={data.icon} alt="Project Icon" />
+                    <img id="project-icon" src={imageUrl} alt="Project Icon" />
                 </div>
                 <div className="project-info">
-                    <p id="project-name">{data.name}</p>
-                    <p id="project-about">{data.about}</p>
+                    <p id="project-name">{name.split("_").slice(1).join(" ")}</p>
+                    <p id="project-about">{description}</p>
                     <div className="project-stats">
                         <div className="project-stat">
-                            {data.skill?.map((e, i) => (
+                            {topics.map((e, i) => (
                                 <p id="project-topics" key={`sk-1-${i}`}>
                                     {e}
                                 </p>
                             ))}
                         </div>
                         <div className="project-stores">
-                            {data?.google && (
-                                <img
-                                    id="project-store"
-                                    src={Google}
-                                    alt="Google Play Store Store"
-                                    onClick={() =>
-                                        window.open(data.google, "_blank")
-                                    }
-                                />
-                            )}
-                            {data?.apple && (
-                                <img
-                                    id="project-store"
-                                    src={Apple}
-                                    alt="Apple Store"
-                                    onClick={() =>
-                                        window.open(data.apple, "_blank")
-                                    }
-                                />
-                            )}
-                            {data?.webLink && (
+                            <img
+                                id="project-store"
+                                src={Download}
+                                alt="Google Play Store Store"
+                                onClick={() =>
+                                    window.open(html_url + "/archive/refs/heads/" + default_branch + ".zip", "_blank")
+                                }
+                            />
+                            {homepage && (
                                 <img
                                     id="project-store"
                                     src={Web}
                                     alt="Apple Store"
                                     onClick={() =>
-                                        window.open(data.webLink, "_blank")
+                                        window.open(homepage, "_blank")
                                     }
                                 />
                             )}
-
                             <img
                                 id="project-store"
                                 src={Github}
                                 alt="Source Code"
                                 onClick={() => {
-                                    if (!data.repo || data.repo.length <= 0) {
-                                        window.alert("Private Repository");
-                                        return;
-                                    }
-                                    window.open(data.repo, "_blank");
+                                    // if (!data.repo || data.repo.length <= 0) {
+                                    //     window.alert("Private Repository");
+                                    //     return;
+                                    // }
+                                    window.open(html_url, "_blank");
                                 }}
                             />
                         </div>
