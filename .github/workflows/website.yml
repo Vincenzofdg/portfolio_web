@@ -30,11 +30,6 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
 
-      - name: Debug Env Var (opcional)
-        run: echo "Token: $VITE_GITHUB_TOKEN"
-        env:
-          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
-
       - name: Build Project
         env:
           VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
