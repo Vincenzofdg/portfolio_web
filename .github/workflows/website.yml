@@ -37,6 +37,18 @@ jobs:
         run: |
           echo "Token: ${VITE_GITHUB_TOKEN}"
 
+      - name: Testar Secret
+        run: |
+          if [[ -z "$VITE_GITHUB_TOKEN" ]]; then
+            echo "A SECRET NÃO ESTÁ SENDO PASSADA!"
+            exit 1
+          else
+            echo "Secret detectada!"
+          fi
+        env:
+          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
+
+
       - name: Build Project
         env:
           VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
