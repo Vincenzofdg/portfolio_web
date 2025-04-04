@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import "../Style/Project.css";
 import Download from "../Assets/Download.png";
-import DefaultImg from "../Assets/Default.png";
 import Web from "../Assets/Web.png";
 import Github from "../Assets/Technologies/Git.svg";
 import getPreviewImage from "../Hooks/getPreviewImage.js";
@@ -14,8 +13,6 @@ function Project({ data }) {
         async function loadImage() {
             const previewImgRequest = await getPreviewImage(name)
             setImageUrl(previewImgRequest)
-
-            console.log(imageUrl)
         }
 
         loadImage();
@@ -25,7 +22,7 @@ function Project({ data }) {
         <div className="project-card">
             <div className="project-container">
                 <div className="project-presentation">
-                    <img id="project-icon" src={imageUrl === undefined ? DefaultImg : imageUrl} alt="Project Icon" />
+                    <img id="project-icon" src={imageUrl} alt="Project Icon" />
                 </div>
                 <div className="project-info">
                     <p id="project-name">{name.split("_").slice(1).join(" ")}</p>

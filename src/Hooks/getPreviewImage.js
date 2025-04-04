@@ -2,8 +2,6 @@ const URL = "https://api.github.com/graphql"
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
 const getPreviewImage = async (repo) => {
-    console.log("Token:", import.meta.env.VITE_GITHUB_TOKEN);
-
     const query = `
         {
             repository(owner: "Vincenzofdg", name: "${repo}") {
@@ -21,6 +19,9 @@ const getPreviewImage = async (repo) => {
             },
             body: JSON.stringify({ query }),
         });
+        if (response.status === 401) {
+            return "https://vincenzofdg.com/imgs/default.png";
+        }
 
         const jsonResponse = await response.json();
 
@@ -28,7 +29,7 @@ const getPreviewImage = async (repo) => {
             return jsonResponse.data.repository.openGraphImageUrl
         }
     } catch (err) {
-        console.error(err);
+        return "https://vincenzofdg.com/imgs/default.png";
     }
 }
 
