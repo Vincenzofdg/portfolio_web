@@ -6,7 +6,7 @@ import Github from "../Assets/Technologies/Git.svg";
 import getPreviewImage from "../Hooks/getPreviewImage.js";
 
 function Project({ data }) {
-    const [imageUrl, setImageUrl] = useState(undefined);
+    const [imageUrl, setImageUrl] = useState("https://vincenzofdg.com/imgs/default.png");
     const { name, description, topics, homepage, html_url, default_branch } = data;
 
     useEffect(() => {
